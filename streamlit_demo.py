@@ -10,9 +10,10 @@ action_list = [
 	"Cancer Dataset",
 	"Stock Data",
 ]
-demo_options = st.sidebar.checkbox("Show Available Datasets")
+action_st=0
+demo_options = st.checkbox("Show Available Datasets")
 if demo_options:
-	action_st = st.sidebar.selectbox(
+	action_st = st.selectbox(
 		"",
 		action_list,
 		
@@ -31,14 +32,14 @@ if action_st:
         url = access_req()
         streamlit.text(url)
 
-"""
+
 from bokeh.models.widgets import Div
     
 
-url = "http://18.191.60.72/hub/login"
+url = "https://colab.research.google.com/drive/1ZEOVpEawUySkJiid1Q5U_9kDnu5Cmw4c?usp=sharing"
 if st.button('Open Playground'):
-    js = "window.open('http://18.191.60.72/hub/login')"  # New tab or window
-    js = "window.location.href = 'http://18.191.60.72/hub/login'"  # Current tab
+    js = "window.open('https://colab.research.google.com/drive/1ZEOVpEawUySkJiid1Q5U_9kDnu5Cmw4c?usp=sharing')"  # New tab or window
+    js = "window.location.href = 'https://colab.research.google.com/drive/1ZEOVpEawUySkJiid1Q5U_9kDnu5Cmw4c?usp=sharing'"  # Current tab
     html = '<img src onerror="{}">'.format(js)
     div = Div(text=html)
-    st.bokeh_chart(div)"""
+    st.bokeh_chart(div)
