@@ -33,13 +33,3 @@ if action_st:
         streamlit.text(url)
 
 
-from bokeh.models.widgets import Div
-    
-
-url = "https://colab.research.google.com/github/Nilanshrajput/Pysyft-Duet-Demo/blob/master/mnist/MNIST_Syft_Data_Scientist.ipynb"
-if st.button('Open Playground'):
-    js = f"window.open({url})"  # New tab or window
-    js = f"window.location.href = {url}"  # Current tab
-    html = '<img src onerror="{}">'.format(js)
-    div = Div(text=html)
-    st.bokeh_chart(div)
