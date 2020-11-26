@@ -22,7 +22,7 @@ if demo_options:
 def access_req():
     url = """
             import syft as sy
-            duet = sy.duet("7de28b338b90345508a97d31bee7d0ae")
+            duet = sy.duet("76e601789f7161aa8e2c5fe2be9287d7")
     """
     return url
 
